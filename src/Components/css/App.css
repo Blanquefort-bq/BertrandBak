@@ -1,5 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Kreon:wght@300..700&display=swap');
+
+
+
+*{
+    margin:0px;
+}
 body{
-    color: grey;
-    background-image: url("../../assets/images/Halftone-background.png");
-  }
+    margin:0px;
+    color: #C6C6C6;
+    font-family: "Kreon";   
+}
+main{
+    margin:0px;
+    background-image: url(../../assets/images/Halftone-background.png);
+    display: block;
+    width: 100vw; 
+    height: 287.3vh;
   
+    background-color: green;
+    background-size: cover ; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+nav{
+    width:100%;
+    height:70px;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav>img{
+    width:40px;
+    height:40px;
+    transform: rotate(-45deg);
+    pointer-events: none;
+    
+}
+.Landing{
+    display:flex;
+    height:35%;
+}
+.L_Left{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.L_Left,.L_Right{
+    width:50%;
+    height:auto;
+    
+}
+.MyNames{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+}
+.L_Right>img{
+    width:100%;
+    height:auto;
+}
+footer{
+    font-size:20px;
+    height:400px;
+    width:100%;
+    background-color: black;
+    color: #C6C6C6;
+   display: flex;
+   align-items:center;
+   justify-content: center;
+   font-size:7vh;
+}
+section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.InfoContainters{
+    display:flex;
+    height:60%;
+   
+}
+.infotext{
+    color:pink;
+    height:100%;
+}
+h1{
+    color:#434224;
+    font-size:10vh;
+}
+h2{
+    font-family: "Alegreya";
+    font-size:4vh;
+    color:#434224;
+}
