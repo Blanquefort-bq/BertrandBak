@@ -5,7 +5,7 @@ import About from "./About"
 import Landing from "./Landing"
 import Skills from "./Skills"
 import Footer from "./Footer"
-
+import Start from "./Start"
 
 
 function App() {
@@ -15,10 +15,11 @@ function App() {
         <Navbar/>
         <main>
           <Landing/>
-          <div className="InfoContainters">
+          <div className="Container">
             <About/>
-            <Skills/>
+            <Skills/> 
           </div>
+          <Start/>
         </main>
         <Footer/>
       </div>

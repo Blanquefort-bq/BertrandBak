@@ -1,100 +1,241 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Kreon:wght@300..700&display=swap');
 
-
-
+:root{
+    --PrimaryText:#C6C6C6;;
+    --SecondarText:#58572F;
+}
 *{
-    margin:0px;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 body{
     margin:0px;
-    color: #C6C6C6;
-    font-family: "Kreon";   
+    color: var(--PrimaryText);
+    font-family: "Kreon", serif;
+    background-color: black;   
 }
 main{
-    margin:0px;
-    background-image: url(../../assets/images/Halftone-background.png);
+    background-image: url(../../assets/images/Halftone-background.webp);
     display: block;
-    width: 100vw; 
-    height: 287.3vh;
-  
-    background-color: green;
+    width: 100%; 
+    min-height:100vh;
+    height:287.3vh;
     background-size: cover ; 
     background-repeat: no-repeat;
     background-position: center center;
+    padding-top:80px;
 }
 nav{
+    top:0;
     width:100%;
     height:70px;
     background-color:black;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    position:fixed;  
 }
 nav>img{
-    width:40px;
-    height:40px;
-    transform: rotate(-45deg);
+    max-width:60px;
+    height:auto;  
+}
+img{
     pointer-events: none;
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    height:400px;
+    width:100%; 
+    font-size:4rem;
+    background-color: black;
+    color: var(--PrimaryText);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+h1{
+    color:var(--SecondarText);
+    font-size:7rem;
     
 }
+h2{
+    font-family: "Alegreya",serif;
+    font-size:3rem;
+    color:var(--SecondarText);
+}
+span{
+    color:var(--SecondarText);
+    font-family:"Kreon",serif;
+    
+}
+
 .Landing{
-    display:flex;
-    height:35%;
+    min-height:33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+}
+.L_Left,.L_Right{
+    width:50%;
+    height:100%;
 }
 .L_Left{
     display:flex;
     justify-content: center;
     align-items: center;
 }
-.L_Left,.L_Right{
-    width:50%;
-    height:auto;
+.L_Right img {
+    width: 100%;
+    height: auto;
+}
+
+.Container{
+    width:100%;
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    min-height:34%; 
+    font-size:1.25vw;  
+}
+
+.infotext{
     
+    font-size:1.25rem;
+    text-align: left;
+    margin:3rem;
 }
-.MyNames{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+section,article{
+    width: 50%;
     height: 100%;
-    width:100%;
 }
-.L_Right>img{
-    width:100%;
-    height:auto;
-}
-footer{
-    font-size:20px;
-    height:400px;
-    width:100%;
-    background-color: black;
-    color: #C6C6C6;
-   display: flex;
-   align-items:center;
-   justify-content: center;
-   font-size:7vh;
-}
-section{
+.about,.skills{
     display:flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 0px 1rem;
 }
-.InfoContainters{
-    display:flex;
-    height:60%;
+.about{
+    justify-self:flex-start;
+}
+.skills{
+    justify-self:flex-end;
+}
+.StartComp{
+   
+   width: 100%;
+   height: 33%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-size:5rem;
    
 }
-.infotext{
-    color:pink;
-    height:100%;
+
+/* Responsivness */
+
+@media (max-width:1024px){
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    
+    .Landing {
+        flex-direction: column;
+    }
+
+    .L_Left, .L_Right {
+        width: 80%;
+    }
 }
-h1{
-    color:#434224;
-    font-size:10vh;
+@media (max-width: 768px) {
+    nav {
+        height: 70px;
+    }
+
+    main {
+        padding-top: 70px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .L_Left, .L_Right {
+        width: 100%;
+    }
+    .Container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    section,article{
+        width: 100%;
+    }
+    .infotext {
+        padding: 1rem;
+    }
+
+    .infotext > p {
+        font-size: 0.9rem;
+    }
+    .StartComp p{
+        font-size:3rem;
+    }
+    footer {
+        font-size: 3.5rem;
+    }
 }
-h2{
-    font-family: "Alegreya";
-    font-size:4vh;
-    color:#434224;
+
+@media (max-width: 480px) {
+    nav {
+        height: 60px;
+    }
+    nav img{
+        max-width:40px;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+    section,article{
+        width: 100%;
+    }
+    .Container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .infotext{
+        width: 100%;
+    }
+    .infotext > p {
+        font-size: 0.8rem;
+    }
+    .StartComp p{
+        font-size:2.5rem;
+    }
+    footer {
+        font-size: 2.2rem;
+        height:300px;
+    }
 }
